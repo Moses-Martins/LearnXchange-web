@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; 
+    background-color: #fcfaf8;
+    color: #333;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.container {
+    text-align: center;
+    max-width: 90%;
+}
+
+/* --- 1. Logo --- */
+.logo {
+    margin-bottom: 50px; 
+}
+
+.logo img {
+    width: 220px;
+}
+
+/* --- 2. Countdown Timer --- */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+    margin-bottom: 40px;
+}
+
+.time-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.number {
+    font-size: 5rem; 
+    font-weight: 300;
+    letter-spacing: -3px;
+    line-height: 1;
+    color: #333;
+}
+
+.label {
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #999; /* Light color for the labels */
+    margin-top: 5px;
+}
+
+
+.tagline {
+    font-size: 0.75rem;
+    color: #4a3ef7; 
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700; 
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+/* --- Media Query for smaller screens --- */
+@media (max-width: 600px) {
+    .number {
+        font-size: 3rem;
+    }
+    .countdown {
+        gap: 15px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .subscribe-form input {
+        width: 80%; 
+    }
+}
