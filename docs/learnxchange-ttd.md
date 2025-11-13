@@ -73,14 +73,16 @@ User discovers people/skills → may follow, message, or propose exchange.
 
 bash
 
-`[Profile Screen]
+```
+[Profile Screen]
    |
    |--> GET /user/:id → User Service → User DB
    |--> GET /feed/userPosts/:id → Feed Service → Feed DB
    |--> POST /user/follow         → User Service → User DB
    |--> PUT /user/updateProfile   → User Service → User DB
    |
-   |<-- Profile info + posts + stats` 
+   |<-- Profile info + posts + stats
+```
 
 **Result:**  
 Shows user bio, their posts, badges, and exchange options.
