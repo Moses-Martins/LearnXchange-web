@@ -71,8 +71,6 @@ User discovers people/skills → may follow, message, or propose exchange.
 
 #### (D) Profile (Viewing or Editing)
 
-bash
-
 ```
 [Profile Screen]
    |
@@ -347,7 +345,7 @@ notifications {
  
 ----------
 
-### 🧭 5. User Flow Summary (Compact Map)
+### 6. User Flow Summary (Compact Map)
 ```
 LOGIN
   ↓
