@@ -1,5 +1,5 @@
-import { Link } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ReactNode } from "react";
 import AuthButton from "./AuthButton";
 import NavBar from "./navbar/NavBar";

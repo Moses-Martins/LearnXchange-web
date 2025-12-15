@@ -2,7 +2,7 @@ import { Button } from '@/components/form/Button';
 import { InputField } from '@/components/form/InputField';
 import { useLogin } from '@/hooks/useLogin';
 import { LoginData } from '@/types/auth';
-import { Link } from 'lucide-react';
+import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 
 

@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { useState } from 'react';
 
 const navItems: string[] = ['Explore', 'Feed', 'Learn', 'Exchange', 'Community'];
@@ -11,17 +12,17 @@ export default function NavBar() {
       {/* Desktop Menu */}
       <div className="hidden lg:flex space-x-10">
         {navItems.map((item) => (
-          <a
+          <Link
             key={item}
             href={`/${item.toLowerCase()}`}
-            className={`text-gray-600 font-semibold hover:text-orange-600 transition duration-150 ease-in-out ${
+            className={`text-gray-700 font-semibold hover:text-orange-600 transition duration-150 ease-in-out ${
               item === 'Explore'
                 ? 'text-orange-600 border-b-2 border-orange-600 pb-1'
                 : ''
             }`}
           >
             {item}
-          </a>
+          </Link>
         ))}
       </div>
 
@@ -66,14 +67,14 @@ export default function NavBar() {
       {isOpen && (
         <div className="absolute top-full left-0 w-auto bg-white shadow-md flex flex-col p-2 z-20">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item}
               href={`/${item.toLowerCase()}`}
               className="px-4 py-2 text-gray-600 hover:text-purple-600 border-b border-gray-200"
               onClick={() => setIsOpen(false)} // close menu on click
             >
               {item}
-            </a>
+            </Link>
           ))}
         </div>
       )}

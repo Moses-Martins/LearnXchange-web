@@ -18,7 +18,7 @@ export default function AuthMenu() {
         </Link>
 
         <Link href="/signup">
-          <button className="px-4 py-2 text-white bg-purple-600 rounded-lg hover:bg-purple-700 transition">
+          <button className="px-4 py-2 text-white bg-purple-600 border border-purple-600 rounded-lg hover:bg-purple-700 transition">
             Sign up
           </button>
         </Link>
