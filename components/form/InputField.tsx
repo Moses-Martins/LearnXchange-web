@@ -16,6 +16,7 @@ export type InputFieldProps = {
   type?: 'text' | 'email' | 'password' | 'textarea';
   label?: string;
   error?: FieldError;
+  placeholder?: string;
 } & Partial<
   ReturnType<UseFormRegister<Record<string, unknown>>>
 >;
@@ -26,6 +27,7 @@ export const InputField = forwardRef(
       type = 'text',
       label,
       error,
+      placeholder,
       ...inputProps
     } = props;
 
@@ -43,6 +45,7 @@ export const InputField = forwardRef(
           <Input
             bg="white"
             type={type}
+            placeholder={placeholder}
             className="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-purple-500 focus:border-purple-500 text-lg;"
             {...inputProps}
             ref={ref}

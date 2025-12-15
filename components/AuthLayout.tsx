@@ -49,7 +49,7 @@ export default function AuthLayout({ children }: AuthLayoutProps) {
             </div>
           </div>
 
-          <p className="text-xs text-gray-500 mb-4">CONTINUE WITH</p>
+          <p className="text-xs text-purple-700 mb-4">CONTINUE WITH</p>
 
           <div className="flex justify-between w-full max-w-[240px] sm:max-w-xs space-x-3">
             <button className="flex-1 flex items-center justify-center py-2 px-4 border border-gray-300 rounded-3xl hover:bg-gray-50 transition duration-150">

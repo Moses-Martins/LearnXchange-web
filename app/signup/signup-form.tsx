@@ -34,6 +34,7 @@ export const SignupForm = ({
                 <div className="mt-1">
                     <InputField
                         label="Email"
+                        placeholder="doejohn@example.com"
                         type="email"
                         {...register('email')}
                         error={formState.errors['email']}
@@ -45,6 +46,7 @@ export const SignupForm = ({
                 <div className="flex-1 mt-1">
                     <InputField
                         label="Password"
+                        placeholder="********"
                         type="password"
                         {...register('password1', {
                             required: 'Password field cannot be empty',
@@ -56,6 +58,7 @@ export const SignupForm = ({
                 <div className="flex-1 mt-1">
                     <InputField
                         label="Confirm Password"
+                        placeholder="********"
                         type="password"
                         {...register('password2', {
                             required: 'Confirm Password field cannot be empty',
@@ -71,6 +74,7 @@ export const SignupForm = ({
                     <InputField
                         label="Username"
                         type="text"
+                        placeholder="johndoe12345"
                         {...register('username', {
                             required: 'Username field cannot be empty',
                         })}
@@ -91,7 +95,7 @@ export const SignupForm = ({
                 <div className="text-center">
                     <p className="text-sm text-gray-900">
                         Already have an account?&nbsp;
-                        <Link href="/login" className="font-medium text-red-500 hover:text-red-700">
+                        <Link href="/signin" className="font-medium text-red-500 hover:text-red-700">
                             Sign in
                         </Link>
                     </p>

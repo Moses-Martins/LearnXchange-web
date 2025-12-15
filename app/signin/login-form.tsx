@@ -34,6 +34,7 @@ export const LoginForm = ({
                 <div className="mt-1">
                     <InputField
                         label="Email"
+                        placeholder="doejohn@example.com"
                         type="email"
                         {...register('email')}
                         error={formState.errors['email']}
@@ -44,6 +45,7 @@ export const LoginForm = ({
                     <InputField
                         label="Password"
                         type="password"
+                        placeholder="**************"
                         {...register('password', {
                             required: 'Password field cannot be empty',
                         })}
