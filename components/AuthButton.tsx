@@ -11,7 +11,7 @@ export default function AuthMenu() {
     <div className="relative">
       {/* Desktop Auth Buttons */}
       <div className="hidden sm:flex items-center space-x-3">
-        <Link href="/login">
+        <Link href="/signin">
           <button className="px-4 py-2 text-purple-600 border border-purple-600 rounded-lg hover:bg-purple-50 transition">
             Sign in
           </button>
