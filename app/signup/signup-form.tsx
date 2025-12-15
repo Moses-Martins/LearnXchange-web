@@ -2,6 +2,7 @@ import { Button } from '@/components/form/Button';
 import { InputField } from '@/components/form/InputField';
 import { useSignup } from '@/hooks/useSignup';
 import { SignupData } from '@/types/auth';
+import { Link } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 
 
@@ -90,9 +91,9 @@ export const SignupForm = ({
                 <div className="text-center">
                     <p className="text-sm text-gray-900">
                         Already have an account?&nbsp;
-                        <a href="/login" className="font-medium text-red-500 hover:text-red-700">
+                        <Link href="/login" className="font-medium text-red-500 hover:text-red-700">
                             Sign in
-                        </a>
+                        </Link>
                     </p>
                 </div>
             </form>

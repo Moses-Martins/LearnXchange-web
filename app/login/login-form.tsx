@@ -2,6 +2,7 @@ import { Button } from '@/components/form/Button';
 import { InputField } from '@/components/form/InputField';
 import { useLogin } from '@/hooks/useLogin';
 import { LoginData } from '@/types/auth';
+import { Link } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 
 
@@ -52,9 +53,9 @@ export const LoginForm = ({
 
                 <div className="flex justify-end items-center">
                     <div className="flex items-center">
-                        <a href="#" className="ml-2 text-xs text-red-500 hover:text-red-700 cursor-pointer">
+                        <Link href="#" className="ml-2 text-xs text-red-500 hover:text-red-700 cursor-pointer">
                             Forgot Password
-                        </a>
+                        </Link>
                     </div>
                 </div>
 
@@ -71,9 +72,9 @@ export const LoginForm = ({
                 <div className="mt-7 text-center">
                     <p className="text-sm text-gray-900">
                         New to LearnXchange?&nbsp;
-                        <a href="/signup" className="font-medium text-red-500 hover:text-red-700">
+                        <Link href="/signup" className="font-medium text-red-500 hover:text-red-700">
                             Create an Account in
-                        </a>
+                        </Link>
                     </p>
                 </div>
             </form>

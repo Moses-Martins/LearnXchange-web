@@ -5,7 +5,6 @@ import { FcGoogle } from "react-icons/fc";
 
 type AuthLayoutProps = {
   children: ReactNode;
-  title?: string;
 };
 
 export default function AuthLayout({ children }: AuthLayoutProps) {
