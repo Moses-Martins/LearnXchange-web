@@ -1,4 +1,5 @@
-import { MapPin, Search, TrendingUp, Video, Zap } from 'lucide-react';
+import SearchBar from '@/components/SearchBar';
+import { MapPin, TrendingUp, Video, Zap } from 'lucide-react';
 
 // Define a type for the filter buttons for better type safety
 interface FilterButtonProps {
@@ -16,7 +17,7 @@ const FilterButton = ({ icon, text, extraColor }: FilterButtonProps) => (
 
 export default function Explore() {
     return (
-        <div className="max-w-[1350px] mx-auto relative h-[400px] sm:h-[650px] overflow-hidden">
+        <div className="max-w-[1350px] mx-auto relative h-[340px] sm:h-[650px] overflow-hidden">
             {/* Background Image/Overlay */}
             <div
                 className="absolute inset-0 bg-cover bg-center mt-10"
@@ -40,17 +41,7 @@ export default function Explore() {
                     Discover thousand of Skills, Connect with expert teachers and start your learning journey today
                 </p>
 
-                {/* Search Bar */}
-                <div className="w-full max-w-xl mb-4 sm:mb-8">
-                    <div className="relative">
-                        <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                        <input
-                            type="text"
-                            placeholder="Search for any skills you want to learn..."
-                            className="bg-white w-full py-2 sm:py-4 pl-12 pr-6 rounded-full text-gray-800 focus:outline-none focus:ring-4 focus:ring-purple-400/50 transition duration-300 shadow-xl placeholder-transparent sm:placeholder-gray-400"
-                        />
-                    </div>
-                </div>
+                <SearchBar variant="desktop" />
 
                 {/* Mobile: single container */}
                 <div className="sm:hidden">
