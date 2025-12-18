@@ -1,12 +1,14 @@
 'use client';
 import Link from 'next/link';
-import { useState } from 'react';
 
-const navItems: string[] = ['Explore', 'Feed', 'Learn', 'Exchange', 'Community'];
 
-export default function NavBar() {
-  const [isOpen, setIsOpen] = useState(false);
+type NavBarProps = {
+  isMenuOpen: boolean;
+  setIsMenuOpen: (open: boolean) => void;
+};
 
+export default function NavBar({ isMenuOpen, setIsMenuOpen }: NavBarProps) {
+  const navItems: string[] = ['Explore', 'Feed', 'Learn', 'Exchange', 'Community'];
   return (
     <nav className="relative">
       {/* Desktop Menu */}
@@ -15,11 +17,10 @@ export default function NavBar() {
           <Link
             key={item}
             href={`/${item.toLowerCase()}`}
-            className={`text-gray-700 font-semibold hover:text-orange-600 transition duration-150 ease-in-out ${
-              item === 'Explore'
-                ? 'text-orange-600 border-b-2 border-orange-600 pb-1'
-                : ''
-            }`}
+            className={`text-gray-700 font-semibold hover:text-orange-600 transition duration-150 ease-in-out ${item === 'Explore'
+              ? 'text-orange-600 border-b-2 border-orange-600 pb-1'
+              : ''
+              }`}
           >
             {item}
           </Link>
@@ -29,7 +30,7 @@ export default function NavBar() {
       {/* Mobile Hamburger */}
       <div className="flex lg:hidden items-center justify-between">
         <button
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="text-gray-600 focus:outline-none"
           aria-label="Toggle menu"
         >
@@ -40,7 +41,7 @@ export default function NavBar() {
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            {isOpen ? (
+            {isMenuOpen  ? (
               // X icon
               <path
                 strokeLinecap="round"
@@ -59,25 +60,7 @@ export default function NavBar() {
             )}
           </svg>
         </button>
-
-        {/* Logo or Brand can go here if needed */}
       </div>
-
-      {/* Mobile Menu (Dropdown) */}
-      {isOpen && (
-        <div className="absolute top-full left-0 w-auto bg-white shadow-md flex flex-col p-2 z-20">
-          {navItems.map((item) => (
-            <Link
-              key={item}
-              href={`/${item.toLowerCase()}`}
-              className="px-4 py-2 text-gray-600 hover:text-purple-600 border-b border-gray-200"
-              onClick={() => setIsOpen(false)} // close menu on click
-            >
-              {item}
-            </Link>
-          ))}
-        </div>
-      )}
     </nav>
   );
 }
