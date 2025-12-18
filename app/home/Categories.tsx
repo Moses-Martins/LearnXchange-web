@@ -22,16 +22,12 @@ export default function Categories() {
 
       {/* --- Image Grid Section --- */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-        {images.map((image) => (
+        {images.map((image, index) => (
           <div
             key={image.id}
-            className="w-full aspect-square overflow-hidden bg-gray-100 rounded-sm shadow-md"
+            className={`w-full aspect-square overflow-hidden bg-gray-100 rounded-sm shadow-md
+      ${index >= 3 ? 'hidden sm:block' : ''}`}
           >
-            {/* - w-full and h-full ensure the image fills the parent div.
-              - object-cover crops the image to cover the entire container 
-                while preserving its aspect ratio.
-              - aspect-square on the parent ensures the grid cells are square.
-            */}
             <img
               src={image.url}
               alt={image.alt}
@@ -46,4 +42,4 @@ export default function Categories() {
 
 
 
-  
+

@@ -30,16 +30,16 @@ export default function Recommend({ profiles }: RecommendProps) {
                     alt="Profile"
                   />
                   <div>
-                    <p className="text-lg font-semibold">{profile.name}</p>
-                    <p className="flex items-center text-sm text-zinc-400"><MdLocationOn /><span>{profile.location}</span></p>
+                    <p className="text-sm sm:text-lg font-semibold">{profile.name}</p>
+                    <p className="flex items-center min-[380px]:max-[440px]:text-xs text-sm text-zinc-400"><MdLocationOn /><span>{profile.location}</span></p>
                   </div>
                 </div>
-                <div className="text-right flex gap-3">
+                <div className="text-right flex items-center gap-3">
                   <div className="flex flex-col items-center">
                     <span className="text-yellow-500 mr-1">{profile.rating}</span>
                     <span className="text-zinc-400 text-xs">{profile.reviews}</span>
                   </div>
-                  <button className="ml-auto mt-1 px-2 py-2 text-sm font-semibold text-white bg-orange-500 rounded-lg hover:bg-orange-600 transition duration-150">
+                  <button className="min-[380px]:max-[440px]:w-15 ml-auto mt-1 px-2 py-2 text-sm font-semibold text-white bg-orange-500 rounded-lg hover:bg-orange-600 transition duration-150">
                     View Profile
                   </button>
                 </div>

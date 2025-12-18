@@ -84,12 +84,10 @@ const profiles: Profile[] = [
 export default function HomePage() {
 
   const cards = [
-    <CourseCard course={marketingCourse} />,
-    <CourseCard course={webDevCourse} />,
-    <CourseCard course={dataScienceCourse} />,
-    <CourseCard course={designCourse} />,
-
-
+    <CourseCard key="marketing" course={marketingCourse} />,
+    <CourseCard key="webdev" course={webDevCourse} />,
+    <CourseCard key="datascience" course={dataScienceCourse} />,
+    <CourseCard key="design" course={designCourse} />,
   ];
 
   return (
@@ -104,7 +102,7 @@ export default function HomePage() {
         <Carousel items={cards} />
       </section>
       <section className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
-         <h2 className="mb-4 text-xl sm:text-3xl font-bold text-gray-900">Recommended for You</h2>
+        <h2 className="mb-4 text-xl sm:text-3xl font-bold text-gray-900">Recommended for You</h2>
         <Recommend profiles={profiles} />
       </section>
       <Flow />
