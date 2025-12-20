@@ -1,6 +1,6 @@
 import { Button } from '@/components/form/Button';
 import { InputField } from '@/components/form/InputField';
-import { useSignup } from '@/hooks/useSignup';
+import { useSignup } from '@/features/auth/useSignup';
 import { SignupData } from '@/types/auth';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';

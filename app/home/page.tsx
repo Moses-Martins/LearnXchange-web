@@ -1,6 +1,6 @@
 import Explore from '@/app/home/ExplorePage';
 import Carousel from '@/components/Carousel';
-import Footer from '@/components/Footer';
+import Footer from '@/components/footer/Footer';
 import { Course, default as CourseCard } from './Card';
 import Categories from './Categories';
 import Flow from './Flow';

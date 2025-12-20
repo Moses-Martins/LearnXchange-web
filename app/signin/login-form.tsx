@@ -1,11 +1,10 @@
+"use client"
 import { Button } from '@/components/form/Button';
 import { InputField } from '@/components/form/InputField';
-import { useLogin } from '@/hooks/useLogin';
+import { useLogin } from '@/features/auth/useLogin';
 import { LoginData } from '@/types/auth';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
-
-
 
 export type LoginFormProps = {
     onSuccess: () => void;
