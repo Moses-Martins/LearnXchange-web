@@ -1,14 +1,12 @@
 'use client';
 import Link from 'next/link';
-import { useState } from 'react';
 
 interface AuthButtonProps {
     variant: "desktop" | "mobile";
 }
 
 export default function AuthButton({ variant }: AuthButtonProps) {
-  const [isOpen, setIsOpen] = useState(false);
-
+  
   return (
     <div className="relative">
       {/* Desktop Auth Buttons */}
