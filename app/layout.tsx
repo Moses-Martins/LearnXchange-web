@@ -1,6 +1,7 @@
 import { Notifications } from "@/components/notifications/Notifications";
 import ErrorBoundaryProvider from "@/provider/error-boundary-provider";
 import ReactQueryProvider from "@/provider/react-query-provider";
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins, Roboto } from "next/font/google";
 import "./globals.css";
@@ -44,6 +45,7 @@ export default function RootLayout({
         <Notifications />
         <ErrorBoundaryProvider>
           <ReactQueryProvider>
+            <ReactQueryDevtools initialIsOpen={false} />
             {children}
           </ReactQueryProvider>
         </ErrorBoundaryProvider>

@@ -1,4 +1,3 @@
-import { queryClient } from '@/lib/react-query';
 import { signupService } from "@/services/auth-service";
 import { authResponse, SignupData } from '@/types/auth';
 import { UserData } from '@/types/user';
@@ -18,7 +17,6 @@ export const useSignup = ({
     const { mutate: submit, isPending } = useMutation({
         mutationFn: signup,
         onSuccess: (data) => {
-            queryClient.setQueryData(['auth-user'], data.user);
             onSuccess?.(data.user);
         },
     });
