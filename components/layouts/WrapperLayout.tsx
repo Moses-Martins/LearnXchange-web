@@ -3,10 +3,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ReactNode, useEffect, useState } from "react";
-import AuthButton from "./AuthButton";
-import NavBar from "./navbar/NavBar";
-import NavBarMenuLinks from './navbar/NavBarMenuLinks';
-import SearchBar from './SearchBar';
+import AuthButton from "../AuthButton";
+import NavBar from "../navbar/NavBar";
+import NavBarMenuLinks from '../navbar/NavBarMenuLinks';
+import SearchBar from '../SearchBar';
 
 type HeaderLayoutProps = {
     children: ReactNode;
