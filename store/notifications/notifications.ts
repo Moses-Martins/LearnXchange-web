@@ -1,4 +1,4 @@
-import { uid } from '@/lib/uid';
+import { uid } from '@/utils/uid';
 import { createStore, useStore } from 'zustand';
 
 
