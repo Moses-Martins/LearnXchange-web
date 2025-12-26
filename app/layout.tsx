@@ -1,7 +1,4 @@
-import { Notifications } from "@/components/notifications/Notifications";
-import ErrorBoundaryProvider from "@/provider/error-boundary-provider";
-import ReactQueryProvider from "@/provider/react-query-provider";
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import AppProvider from "@/providers/app-provider";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins, Roboto } from "next/font/google";
 import "./globals.css";
@@ -24,7 +21,7 @@ const geistRoboto = Roboto({
 const geistPoppins = Poppins({
   variable: '--font-geist-poppins',
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'], 
+  weight: ['300', '400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
@@ -42,13 +39,9 @@ export default function RootLayout({
       <body
         className={`${geistPoppins.variable} ${geistRoboto.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Notifications />
-        <ErrorBoundaryProvider>
-          <ReactQueryProvider>
-            <ReactQueryDevtools initialIsOpen={false} />
-            {children}
-          </ReactQueryProvider>
-        </ErrorBoundaryProvider>
+        <AppProvider>
+          {children}
+        </AppProvider>
       </body>
     </html>
   );

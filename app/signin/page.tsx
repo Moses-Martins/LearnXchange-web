@@ -14,7 +14,7 @@ export default function LoginPage() {
  
   return (
     <>
-      <Seo title="Log In" />
+      <Seo title="Sign In" />
       <LoginForm onSuccess={onSuccess} />
     </>
   )
