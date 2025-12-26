@@ -8,7 +8,7 @@ export default function SignupPage() {
   const router = useRouter();
 
   const onSuccess = () => {
-    const redirect = "/confirm-password"; 
+    const redirect = "/confirm-email"; 
     router.push(redirect);
   }
 
